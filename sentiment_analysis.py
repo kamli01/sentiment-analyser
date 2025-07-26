@@ -15,10 +15,9 @@ import pandas as pd
 #Instantiate Model
 
 tokenizer = AutoTokenizer.from_pretrained('nlptown/bert-base-multilingual-uncased-sentiment')
+model = AutoModelForSequenceClassification.from_pretrained('nlptown/bert-base-multilingual-uncased-sentiment')
 
 #Encode and Calculate sentiment
-
-model = AutoModelForSequenceClassification.from_pretrained('nlptown/bert-base-multilingual-uncased-sentiment')
 
 tokens = tokenizer.encode('Meh it was pretty good but can be better', return_tensors='pt')
 
